@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 254505018}
-  timeLeftSeconds: 3
+  timeLeftSeconds: 5
   Scene: Stage 2
 --- !u!114 &1804605956
 MonoBehaviour:
@@ -2097,7 +2097,6 @@ GameObject:
   - component: {fileID: 2013626878}
   - component: {fileID: 2013626877}
   - component: {fileID: 2013626876}
-  - component: {fileID: 2013626875}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2105,18 +2104,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2013626875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2013626874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2c47511361a4ea40b5a9fe31280224a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2013626876
 BoxCollider:
   m_ObjectHideFlags: 0
