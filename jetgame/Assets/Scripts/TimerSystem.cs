@@ -4,19 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TimerSystem : MonoBehaviour {
-    private const double V = 0.0;   
+public class TimerSystem : MonoBehaviour
+{
     public Text timerText;
     public float timeLeftSeconds = 3F;
     public static bool TimesUp = false;
+    public string SceneName;
 
-    public string Scene;
 
+    // Start is called before the first frame update
     void Start()
     {
         TimesUp = false;
     }
 
+    // Update is called once per frame
     void Update()
     {
         float t = timeLeftSeconds -= Time.deltaTime;
@@ -32,17 +34,16 @@ public class TimerSystem : MonoBehaviour {
             timeLeftSeconds = 0;
             timerText.text = minutes + ":" + seconds;
             TimesUp = true;
-            Time.timeScale = (float)V;
 
         }
 
         if (TimesUp == true && Input.GetKeyDown("p"))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
 
         if (TimesUp == true && Input.GetKeyDown("m"))
             SceneManager.LoadScene("MenuScene");
-
     }
+
     void OnGUI()
     {
         if (TimesUp == true)
