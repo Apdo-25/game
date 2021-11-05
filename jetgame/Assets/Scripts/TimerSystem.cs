@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerSystem : MonoBehaviour
 {
+   
     public Text timerText;
     public float timeLeftSeconds = 3F;
     public static bool TimesUp = false;
@@ -34,8 +35,19 @@ public class TimerSystem : MonoBehaviour
             timeLeftSeconds = 0;
             timerText.text = minutes + ":" + seconds;
             TimesUp = true;
-
         }
+
+
+
+        if (timeLeftSeconds <= 0)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
 
         if (TimesUp == true && Input.GetKeyDown("p"))
             SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
