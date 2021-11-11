@@ -19,13 +19,12 @@ public class GameManager : MonoBehaviour {
     public void Win()
     {
         youWinText.SetActive(true);
-        Time.timeScale = .2f;
+        Time.timeScale = 0;
         Invoke("Reset", resetDelay);
     }
 
     void Reset()
     {
-        Time.timeScale = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
