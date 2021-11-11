@@ -1145,7 +1145,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FLY AROUND BABY
+  m_Text: You're given the ability to fly with a jetpack, but its got a fuel limit
+    of 3 seconds. Get to the blue pillar with the coin on top before time runs out.
+    Good luck.
 --- !u!222 &1124204303
 CanvasRenderer:
   m_ObjectHideFlags: 0
