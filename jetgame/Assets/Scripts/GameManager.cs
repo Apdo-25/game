@@ -2,11 +2,22 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public static GameManager instance = null;
     public GameObject youWinText;
     public float resetDelay;
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+    }
+
 
     void Awake()
     {
@@ -25,6 +36,8 @@ public class GameManager : MonoBehaviour {
 
     void Reset()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
